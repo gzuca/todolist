@@ -1,0 +1,312 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: darkcyan;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: white;
+  background-color: cyan;
+  color: black;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.add-task-form-container{
+  display:flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.task-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+}
+
+.newtask-input{
+  display: flex;
+  flex-direction: column;
+}
+
+.addtask{
+  width: 100%;
+}
+
+.new-task-button{
+  margin-top: 2rem;
+}
+
+.body-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+}
+
+.addtask{
+  flex: 1;
+}
+
+.task-list-container {
+  width: 400px;
+  box-shadow: 7px 7px 10px rgba(0, 139, 139, 0.5), 
+              -3px -3px 10px rgba(255, 255, 255, 0.5); 
+  border-radius: 20px;
+  background-color: aliceblue;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  transition: all 1s ease ;
+}
+
+.task-list {
+  width: 100%;
+  text-align: center; 
+  transition: all 1s ease;
+  opacity: 1;
+  background-color: aliceblue;
+
+}
+
+.task-list ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.task-li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task-list-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center; 
+  gap: 1.5rem; 
+  margin-top: 1rem; 
+  width: auto;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.completed {
+  cursor: pointer;
+  accent-color: #1e90ff; 
+  background-color: #d9ead3;
+  opacity: 0.7;
+}
+
+.to-do-list {
+  background-color: cadetblue;
+  border-radius: 40px;
+  padding: 10rem 10rem; 
+}
+
+.weatherHeader {
+  width: 20rem;
+  display: flex;               
+  align-items: center;         
+  justify-content: space-between; 
+  padding: 1rem;
+  max-width: 500px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  gap: 1rem;
+  margin: 1rem auto;
+
+}
+
+.weatherInfo {
+  display: flex;               
+  align-items: center;
+  gap: 1rem;                   
+}
+
+.weatherInfo p {
+  margin: 0;
+  font-weight: 500;
+  color: #00796b;
+}
+
+.weatherIcon img {
+  width: 60px;
+  height: 60px;
+}
+
+.all, .completedButton, .pending{
+  margin-right: 1rem;
+}
+
+.input-name-form{
+  display:flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 740px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .weatherHeader {
+    width: 95%;
+    max-width: 350px;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .weatherInfo {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .weatherIcon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .add-task-form-container,
+  .task-list-container {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .task-list-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .body-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 620px) {
+  body {
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Weather Header compacto */
+  .weatherHeader {
+    width: 95%;
+    max-width: 360px;
+    flex-direction: column; /* apilar icono y texto */
+    text-align: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .weatherInfo {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .weatherIcon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Formulario y contenedores */
+  .add-task-form-container,
+  .task-list-container {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .task-form,
+  .newtask-input {
+    width: 100%;
+  }
+
+  .task-list-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .body-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .to-do-list {
+    padding: 1rem; /* menos padding para móvil */
+    border-radius: 20px;
+  }
+}
