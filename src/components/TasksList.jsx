@@ -39,6 +39,7 @@ function TasksList({ tasks, deleteTask, toggleComplete, filter, updateTaskText }
                       updateTaskText(task.id, editText);
                       setEditingTaskID("");
                     }}
+                    style={{color:"rgba(255, 255, 255, 0.87)"}}
                   >
                     Save
                   </button>
@@ -47,6 +48,7 @@ function TasksList({ tasks, deleteTask, toggleComplete, filter, updateTaskText }
                       setEditText(task.text);
                       setEditingTaskID("");
                     }}
+                    style={{color:"rgba(255, 255, 255, 0.87)"}}
                   >
                     Cancel
                   </button>
@@ -78,10 +80,11 @@ function TasksList({ tasks, deleteTask, toggleComplete, filter, updateTaskText }
                   setEditingTaskID(task.id);
                   setEditText(task.text);
                 }}
+                style={{color:"rgba(255, 255, 255, 0.87)"}}
               >
                 Edit
               </button>
-              <button onClick={() => deleteTask(task.id)}>Delete</button>
+              <button onClick={() => deleteTask(task.id)} style={{color:"rgba(255, 255, 255, 0.87)"}}>Delete</button>
             </div>
           </div>
         </li>

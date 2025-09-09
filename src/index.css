@@ -306,7 +306,7 @@ button:focus-visible {
   }
 
   .to-do-list {
-    padding: 1rem; /* menos padding para móvil */
+    padding: 1rem; 
     border-radius: 20px;
   }
 }

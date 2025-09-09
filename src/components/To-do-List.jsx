@@ -82,13 +82,13 @@ function ToDoList() {
           <h1>{name.toUpperCase()}'S</h1>
           <h1>TO-DO LIST</h1>
 
-          <button className="all" onClick={() => setFilter("all")}>
+          <button className="all" onClick={() => setFilter("all")} style={{color:"rgba(255, 255, 255, 0.87)"}}>
             All <br /> Qty: {tasks.length}
           </button>
-          <button className="completedButton" onClick={() => setFilter("completed")}>
+          <button className="completedButton" onClick={() => setFilter("completed")} style={{color:"rgba(255, 255, 255, 0.87)"}}>
             Completed <br /> Qty: {qtyCompleted}
           </button>
-          <button className="pending" onClick={() => setFilter("pending")}>
+          <button className="pending" onClick={() => setFilter("pending")} style={{color:"rgba(255, 255, 255, 0.87)"}}>
             Pending <br /> Qty: {qtyPending}
           </button>
 
